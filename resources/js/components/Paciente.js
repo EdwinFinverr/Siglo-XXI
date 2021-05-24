@@ -1,5 +1,5 @@
 import React, {useState} from 'react'; //el usestate son los estados que estamos guardadndo(como una variable para ir actualizando) 
-
+import ReactDOM from 'react-dom';
 import Axios from 'axios'
 import { useHistory, Link } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
@@ -14,7 +14,7 @@ import Alert from 'react-bootstrap/Alert';
 import FigureCaption from 'react-bootstrap/FigureCaption'
 
 
-function PacienteForm(){
+function Paciente(){
     
     const [data, setData] = useState({ //"data" es el objeto creado con los atributos
         Nombre: '',
@@ -159,7 +159,8 @@ function PacienteForm(){
         </Container>
         )    
     }
-export default PacienteForm;
+
+export default Paciente;
 if (document.getElementById('paciente')) {
     ReactDOM.render(<Paciente />, document.getElementById('paciente'));
 }
