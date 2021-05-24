@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-    <div id='main'></div>
+    <div id='paciente'></div>
 @endsection
