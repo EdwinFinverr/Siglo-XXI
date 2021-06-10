@@ -54,8 +54,12 @@
                                                         class="text-indigo-600 hover:text-indigo-900">Editar</a>
                                                 </td>
                                                 <td class=" text-right text-sm font-medium">
-                                                    <a href="{{route('artists.destroy', with($artist))}}"
-                                                        class="text-red-600 hover:text-indigo-900">Eliminar</a>
+                                                    <form method="POST" action="{{ route('artists.destroy',  with('artist')) }}">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit"
+                                                        class="btn btn-danger">Eliminar</a>
+                                                    </form>
                                                 </td>
                                             </tr>
                                             @empty

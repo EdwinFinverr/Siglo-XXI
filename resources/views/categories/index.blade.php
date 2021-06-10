@@ -42,8 +42,12 @@
                                                         class="text-indigo-600 hover:text-indigo-900">Editar</a>
                                                 </td>
                                                 <td class=" text-right text-sm font-medium">
-                                                    <a href="{{route('categories.destroy', with($category))}}"
-                                                        class="text-red-600 hover:text-indigo-900">Eliminar</a>
+                                                    <form method="POST" action="{{ route('categories.destroy',compact('category')) }}">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit"
+                                                        class="btn btn-danger">Eliminar</a>
+                                                    </form>
                                                 </td>
                                             </tr>
                                             @empty

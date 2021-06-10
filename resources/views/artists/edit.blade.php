@@ -34,27 +34,27 @@
                                     @csrf
                                     @method('PUT')
                                     <div class="form-group row">
-                                        <label for="name" class="col-sm-2 col-form-label">nombre</label>
+                                        <label for="name" class="col-sm-2 col-form-label">Nombre</label>
                                         <div class="col-sm-10">
                                             <input type="text" class="form-control" name="name" id="name"
                                                 value="{{ $artist->name }}">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="last_name" class="col-sm-2 col-form-label">apellidos</label>
+                                        <label for="last_name" class="col-sm-2 col-form-label">Apellidos</label>
                                         <div class="col-sm-10">
                                             <input type="text" class="form-control" name="last_name" id="last_name"
                                                 value="{{$artist->last_name }}">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="disquera" class="col-sm-2 col-form-label">disquera</label>
+                                        <label for="disquera" class="col-sm-2 col-form-label">Disquera</label>
                                         <div class="col-sm-10">
                                             <input type="text" class="form-control" name="disquera" id="disquera"
                                                 value="{{ $artist->disquera }}">
                                         </div>
                                     </div>
-                                     <button type="submit" class="btn btn-primary">Crear</button>
+                                     <button type="submit" class="btn btn-secondary">Actualizar</button>
                                 </form>
                             </div>
                         </div>

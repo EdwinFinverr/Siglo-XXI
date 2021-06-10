@@ -20,7 +20,7 @@
                                                 <th scope="col">
                                                     Artista
                                                 </th>
-                                               <th scope="col">
+                                                <th scope="col">
                                                     Categoria
                                                 </th>
                                                 <th scope="col" class="relative px-6 py-3">
@@ -44,7 +44,8 @@
                                                     </div>
                                                 </td>
                                                 <td class="">
-                                                    <div class="text-sm text-gray-900">{{$album->artist->name.' '. $album->artist->last_name}}</div>
+                                                    <div class="text-sm text-gray-900">
+                                                        {{$album->artist->name.' '. $album->artist->last_name}}</div>
                                                 </td>
                                                 <td class="">
                                                     <div class="text-sm text-gray-900">{{$album->category->name}}</div>
@@ -54,8 +55,13 @@
                                                         class="text-indigo-600 hover:text-indigo-900">Editar</a>
                                                 </td>
                                                 <td class=" text-right text-sm font-medium">
-                                                    <a href="{{route('albums.destroy', with($album))}}"
-                                                        class="text-red-600 hover:text-indigo-900">Eliminar</a>
+                                                    <form method="POST" action="{{ route('albums.destroy',with('album')) }}">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit"
+                                                        class="btn btn-danger">Eliminar</a>
+                                                    </form>
+
                                                 </td>
                                             </tr>
                                             @empty
