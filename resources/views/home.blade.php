@@ -23,7 +23,7 @@
                 <div class="card col-sm-10 col-md-10 col-lg-6">
                     <div class="card-body">
                         <h5 class="card-title">Albumes</h5>
-                        <p class="card-text">El total de albumes registrados es: {{ $albums->count() }}</p>
+                        <p class="card-text">El total de albumes registrados es: {{ $albums->count() }} </p>
                     </div>
                 </div>
                 

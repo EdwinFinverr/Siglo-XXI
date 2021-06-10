@@ -54,7 +54,7 @@
                                                         class="text-indigo-600 hover:text-indigo-900">Editar</a>
                                                 </td>
                                                 <td class=" text-right text-sm font-medium">
-                                                    <form method="POST" action="{{ route('artists.destroy',  with('artist')) }}">
+                                                    <form method="POST" action="{{ route('artists.destroy',  with($artist)) }}">
                                                         @csrf
                                                         @method('DELETE')
                                                         <button type="submit"
